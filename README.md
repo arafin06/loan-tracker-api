@@ -8,8 +8,6 @@ built with Laravel 13 and Laravel Sanctum token authentication.
 > soft deletes, and audit logging — applied to a real-world
 > U.S. commercial lending domain.
 
----
-
 ## Tech Stack
 
 | Layer | Technology |
@@ -19,8 +17,6 @@ built with Laravel 13 and Laravel Sanctum token authentication.
 | Database | MySQL 8 |
 | PHP | 8.3 |
 | Server | Apache via Laragon (dev) |
-
----
 
 ## Features
 
@@ -34,8 +30,6 @@ built with Laravel 13 and Laravel Sanctum token authentication.
 - **Dashboard Stats** — total count, total volume, breakdown by status and loan type
 - **API Resources** — all responses shaped via dedicated Resource classes (no raw model leakage)
 - **PHP Enums** — `LoanStatus`, `LoanType`, `PropertyType` with labels and color hints
-
----
 
 ## Domain Fields
 
@@ -52,8 +46,6 @@ Each loan application tracks:
 | `pitia` | Monthly Principal, Interest, Tax, Insurance & Association |
 | `loan_status` | Pipeline stage |
 | `notes` | Underwriting notes |
-
----
 
 ## API Endpoints
 
@@ -86,8 +78,6 @@ GET /api/loans/stats [protected] — dashboard summary
 ?per_page=15&page=2
 
 
----
-
 ## Project Structure
 
 app/
@@ -105,8 +95,6 @@ app/
 ├── LoanApplication.php # SoftDeletes, Enum casts, query scopes
 └── LoanStatusHistory.php # Immutable audit log
 
-
----
 
 ## Local Setup
 
@@ -134,14 +122,10 @@ php artisan serve
 
 API will be available at `http://localhost:8000/api`
 
----
-
 ## Frontend
 
 The Vue 3 SPA frontend lives in a separate repository:
 [loan-tracker-spa](https://github.com/arafin06/loan-tracker-spa)
-
----
 
 ## Author
 
